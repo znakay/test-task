@@ -1,0 +1,69 @@
+.icon-text-item {
+  $self: &;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+
+  &__icon {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+
+    &::before {
+      content: "";
+      display: block;
+
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__text {
+    @include typo-caption-2;
+    color: inherit;
+  }
+
+  &_text-gray {
+    color: $light-gray-c3;
+  }
+
+  &_text-white {
+    color: $white;
+  }
+
+  &_type-qiwi {
+    #{$self}__icon::before {
+      background-image: url($icons + '/qiwi.svg');
+    }
+  }
+
+  &_type-yandex {
+    #{$self}__icon::before {
+      background-image: url($icons + '/walet.svg');
+    }
+  }
+
+  &_type-web-money {
+    #{$self}__icon::before {
+      background-image: url($icons + '/webmoney.svg');
+    }
+  }
+
+  &_type-mail {
+    #{$self}__icon::before {
+      background-image: url($icons + '/envelope.svg');
+    }
+  }
+
+  &_type-vk {
+    #{$self}__icon::before {
+      background-image: url($icons + '/vk.svg');
+    }
+  }
+}
