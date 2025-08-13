@@ -20,7 +20,8 @@
 @mixin typo-headline-3 {
   @include font;
   font-size: 28px;
-  font-weight: 800px;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 @mixin typo-body-1 {
