@@ -1,0 +1,80 @@
+.hero {
+  padding: 202px 0;
+  background-image: url($images + "/hero_image.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include media-breakpoint-down(lg) {
+    padding: 162px 0;
+  }
+
+  @include media-breakpoint-down(md) {
+    background-position: left;
+  }
+
+
+  @include media-breakpoint-down(sm) {
+    padding: 142px 0 122px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 80px;
+
+    @include media-breakpoint-down(md) {
+      row-gap: 40px;
+    }
+  }
+
+  &__title {
+    max-width: 780px;
+
+    @include media-breakpoint-down(md) {
+      text-align: center;
+    }
+  }
+
+  &__text {
+    margin-bottom: 10px;
+  }
+
+  &__bullet-text {
+    list-style-type: none;
+  }
+
+  &__bullet-item {
+    position: relative;
+    padding-left: 26px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: 10px;
+      width: 5px;
+      height: 1.5px;
+      background-color: $black;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+
+    @include media-breakpoint-down(md) {
+      row-gap: 16px;
+    }
+  }
+
+  &__button {
+    text-transform: uppercase;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+}

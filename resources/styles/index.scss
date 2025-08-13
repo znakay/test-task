@@ -1,15 +1,16 @@
-@import './config/path';
-@import './config/variables';
-@import './config/general';
+@import "./config/path";
+@import "./config/variables";
+@import "./config/general";
 
-@import './global';
+@import "./global";
 
-@import './atoms/typography';
-@import './atoms/button';
-@import './atoms/colored-text';
-@import './atoms/link';
-@import './atoms/burger';
+@import "./atoms/typography";
+@import "./atoms/button";
+@import "./atoms/colored-text";
+@import "./atoms/link";
+@import "./atoms/burger";
 
-@import './molecules/navigation';
+@import "./molecules/navigation";
 
-@import './organisms/header';
+@import "./organisms/header";
+@import "./organisms/hero";
