@@ -1,0 +1,25 @@
+.container {
+  margin-inline: auto;
+  padding: 0 16px;
+  max-width: 100%;
+
+  @include media-breakpoint-up(sm) {
+    max-width: 572px;
+  }
+
+  @include media-breakpoint-up(md) {
+    max-width: 752px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    max-width: 992px;
+  }
+
+  @include media-breakpoint-up(xl) {
+    max-width: 1172px;
+  }
+
+  @include media-breakpoint-up(xxl) {
+    max-width: 1202px;
+  }
+}

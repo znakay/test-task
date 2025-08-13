@@ -1,0 +1,55 @@
+@mixin font {
+  font-family: $font;
+  line-height: 100%;
+}
+
+@mixin typo-headline-1 {
+  @include font;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@mixin typo-headline-2 {
+  @include font;
+  font-size: 36px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+@mixin typo-headline-3 {
+  @include font;
+  font-size: 28px;
+  font-weight: 800px;
+}
+
+@mixin typo-body-1 {
+  @include font;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@mixin typo-body-1-bold {
+  @include typo-body-1;
+  font-weight: 700;
+}
+
+@mixin typo-body-2 {
+  @include font;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+@mixin typo-caption-1 {
+  @include font;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@mixin typo-caption-2 {
+  @include font;
+  font-size: 13px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
