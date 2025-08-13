@@ -1,0 +1,30 @@
+.navigation {
+  $self: &;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  list-style-type: none;
+
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+  }
+
+  &__item {
+    &_active {
+      #{$self}__link {
+        color: $skyblue;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__link {
+    @include typo-caption-1;
+    color: $white;
+    transition: color $delaySm ease;
+
+    @include hover {
+      color: $skyblue;
+    }
+  }
+}

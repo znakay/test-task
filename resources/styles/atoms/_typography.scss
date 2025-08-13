@@ -32,3 +32,19 @@ h3,
 .typo-caption-2 {
   @include typo-caption-2;
 }
+
+h1,
+.typo-headline-1,
+h2,
+.typo-headline-2,
+h3,
+.typo-headline-3,
+.typo-body-1,
+.typo-body-1-bold,
+.typo-body-2,
+.typo-caption-1,
+.typo-caption-2 {
+  span {
+    color: $skyblue;
+  }
+}

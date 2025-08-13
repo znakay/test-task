@@ -1,0 +1,52 @@
+.burger {
+  padding: 8px 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 32px;
+  height: 32px;
+  outline: none;
+  cursor: pointer;
+
+  span {
+    position: relative;
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: $white;
+    transition: translate $delaySm ease, rotate $delaySm ease, opacity $delaySm ease, scale $delaySm ease;
+
+    &:first-child {
+      translate: 0;
+    }
+
+    &:nth-child(2) {
+      opacity: 1;
+    }
+
+    &:last-child {
+      translate: 0;
+    }
+  }
+
+  &.active {
+    span {
+      &:first-child {
+        translate: 0 7px;
+        rotate: 45deg;
+        transform-origin: center;
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        translate: 0 -7px;
+        rotate: -45deg;
+        transform-origin: center;
+      }
+    }
+  }
+}

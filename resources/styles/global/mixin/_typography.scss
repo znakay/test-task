@@ -8,6 +8,10 @@
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 36px;
+  }
 }
 
 @mixin typo-headline-2 {
@@ -15,6 +19,10 @@
   font-size: 36px;
   font-weight: 800;
   text-transform: uppercase;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 28px;
+  }
 }
 
 @mixin typo-headline-3 {
@@ -22,6 +30,10 @@
   font-size: 28px;
   font-weight: 800;
   text-transform: uppercase;
+
+  @include media-breakpoint-down(lg) {
+    font-size: 20px;
+  }
 }
 
 @mixin typo-body-1 {
