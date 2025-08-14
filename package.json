@@ -4,11 +4,21 @@
   "description": "[Figma](https://www.figma.com/file/F2qhd2q7PcL9zfIA7y500A/Testing? type=design&node-id=0-1&mode=design&t=ouEUZU3qDLkkc1Ya-0)",
   "main": "index.js",
   "scripts": {
-    "styles": "sass --no-source-map --watch resources/styles/index.scss index.css"
+    "styles": "sass --no-source-map --watch resources/styles/index.scss index.css",
+    "build:styles": "sass --no-source-map resources/styles/index.scss temp.css && npx postcss temp.css --use autoprefixer -o index.css && rm temp.css",
+    "watch:styles": "npm run styles & npx postcss index.css --use autoprefixer -o index.css --watch"
   },
+  "browserslist": [
+    "last 3 versions"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "sass": "^1.90.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1"
   }
 }
