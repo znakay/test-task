@@ -25,7 +25,7 @@ button {
     @include btn-color($black-2a, $gray-6f, $white);
 
     @include hover {
-      @include btn-color($white, $gray-6f, $gray-6f);
+      @include btn-color($white, $black-27, $black-27);
     }
   }
 
