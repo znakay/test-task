@@ -19,9 +19,14 @@
     }
   }
 
-  &__item {
+  &__column {
     display: flex;
+    justify-content: center;
     gap: 0 40px;
+
+    @include media-breakpoint-down(xl) {
+      gap: 24px;
+    }
 
     @include media-breakpoint-down(lg) {
       justify-content: center;
@@ -67,14 +72,7 @@
       @include media-breakpoint-down(xl) {
         order: 2;
       }
-
-      @include media-breakpoint-down(lg) {
-      }
     }
-  }
-
-  &__copyright {
-    color: $white;
   }
 
   &__list {
