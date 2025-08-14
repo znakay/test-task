@@ -28,4 +28,12 @@ button {
       @include btn-color($white, $gray-6f, $gray-6f);
     }
   }
+
+  &_full-width {
+    width: 100%;
+  }
+
+  &_uppercase-text {
+    text-transform: uppercase;
+  }
 }

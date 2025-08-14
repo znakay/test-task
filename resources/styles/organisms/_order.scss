@@ -1,0 +1,26 @@
+.order {
+  padding: 120px 0 150px;
+  background-color: $black-27;
+  background-image: url($images + "/pattern-map.svg");
+
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__steps,
+  &__form {
+    margin-top: 80px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 48px;
+    }
+  }
+}

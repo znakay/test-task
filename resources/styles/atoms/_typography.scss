@@ -25,12 +25,20 @@ h3,
   @include typo-body-2;
 }
 
+.typo-body-2-semibold {
+  @include typo-body-2-semibold;
+}
+
 .typo-caption-1 {
   @include typo-caption-1;
 }
 
 .typo-caption-2 {
   @include typo-caption-2;
+}
+
+.typo-caption-3 {
+  @include typo-caption-3;
 }
 
 h1,
@@ -42,8 +50,10 @@ h3,
 .typo-body-1,
 .typo-body-1-bold,
 .typo-body-2,
+.typo-body-2-semibold,
 .typo-caption-1,
-.typo-caption-2 {
+.typo-caption-2,
+.typo-caption-3 {
   span {
     color: $skyblue;
   }

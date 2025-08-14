@@ -1,14 +1,20 @@
 "use strict";
 
+import { initForm } from "./components/form/index.js";
 import { initHeader } from "./components/header/index.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   window.refs = {
     header: {
       selectors: [".header"],
-      // init: () => initHeader(this.selectors),
       init: function () {
         initHeader(this.selectors);
+      },
+    },
+    form: {
+      selectors: [".form"],
+      init: function () {
+        initForm(this.selectors);
       },
     },
   };

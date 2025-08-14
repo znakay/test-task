@@ -1,0 +1,70 @@
+.input-range {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    gap: 12px;
+  }
+
+  &__title {
+    text-align: start;
+  }
+
+  &__value {
+    color: $white;
+  }
+
+  &__input {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 7px;
+    border-radius: 3px;
+    background-color: rgba($white, 0.7);
+    border: 1px solid $white;
+    outline: none;
+    cursor: pointer;
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $skyblue;
+      border: 3px solid $blue;
+      cursor: pointer;
+      transition: scale $delaySm ease, box-shadow $delaySm ease;
+
+      @include hover {
+        scale: 1.1;
+        box-shadow: 0 3px 8px rgba(79, 195, 247, 0.5);
+      }
+    }
+
+    &::-moz-range-thumb {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background-color: $skyblue;
+      border: 3px solid $blue;
+      cursor: pointer;
+      transition: scale $delaySm ease, box-shadow $delaySm ease;
+
+      @include hover {
+        scale: 1.1;
+        box-shadow: 0 3px 8px rgba(79, 195, 247, 0.5);
+      }
+    }
+
+    &::-moz-range-track {
+      width: 100%;
+      height: 7px;
+      cursor: pointer;
+      background-color: #ffffffb2;
+      border: 1px solid $white;
+      border-radius: 3px;
+    }
+  }
+}

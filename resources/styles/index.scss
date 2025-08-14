@@ -9,9 +9,16 @@
 @import "./atoms/colored-text";
 @import "./atoms/burger";
 @import "./atoms/icon-text-item";
+@import './atoms/input';
+@import './atoms/select';
+@import './atoms/input-file';
+@import './atoms/input-range';
 
 @import "./molecules/navigation";
+@import "./molecules/steps";
+@import "./molecules/form";
 
 @import "./organisms/header";
 @import "./organisms/hero";
+@import "./organisms/order";
 @import "./organisms/footer";

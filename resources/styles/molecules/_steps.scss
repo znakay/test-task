@@ -1,0 +1,98 @@
+.steps {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    row-gap: 70px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    margin: 0 10px;
+    max-width: 189px;
+    width: 100%;
+
+    @include media-breakpoint-down(xl) {
+      margin: unset;
+      max-width: 150px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      max-width: unset;
+    }
+
+    &-image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 100px;
+      border: 5px solid $blue;
+      border-radius: 50%;
+      background-color: $skyblue;
+
+      @include media-breakpoint-down(xl) {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    &-icon {
+      flex-shrink: 0;
+      width: 55px;
+      height: 55px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+
+      @include media-breakpoint-down(xl) {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &:not(:first-child) {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        translate: -74% 47px;
+        width: 110px;
+        height: 6px;
+        background-image: url($images + "/ellipse-line.svg");
+        background-position: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include media-breakpoint-down(xxl) {
+          translate: -70% 47px;
+          width: 95px;
+        }
+
+        @include media-breakpoint-down(xl) {
+          translate: -76% 39px;
+          width: 70px;
+          height: 6px;
+        }
+
+        @include media-breakpoint-down(lg) {
+          top: 0;
+          left: 50%;
+          width: 50px;
+          translate: -50% -28px;
+          rotate: 90deg;
+        }
+      }
+    }
+  }
+}

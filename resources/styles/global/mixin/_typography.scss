@@ -53,6 +53,11 @@
   font-weight: 400;
 }
 
+@mixin typo-body-2-semibold {
+  @include typo-body-2;
+  font-weight: 600;
+}
+
 @mixin typo-caption-1 {
   @include font;
   font-size: 15px;
@@ -63,5 +68,11 @@
 @mixin typo-caption-2 {
   @include font;
   font-size: 13px;
+  font-weight: 400;
+}
+
+@mixin typo-caption-3 {
+  @include font;
+  font-size: 16px;
   font-weight: 400;
 }

@@ -66,6 +66,148 @@
           </div>
         </div>
       </section>
+      <section class="order">
+        <div class="container order__container">
+          <h2 class="order__title typo-headline-2 text-white">
+            Оформление
+            <span>заказа</span>
+          </h2>
+          <p class="order__text typo-body-2 text-gray-bb">
+            Перед заполнением формы ознакомьтесь с нашей схемой работы!
+          </p>
+          <div class="order__steps steps">
+            <div class="steps__item">
+              <div class="steps__item-image">
+                <div
+                  class="steps__item-icon"
+                  style="background-image: url('./resources/images/icons/search.svg')"
+                ></div>
+              </div>
+              <p class="steps__item-text typo-caption-3 text-white">Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="steps__item">
+              <div class="steps__item-image">
+                <div
+                  class="steps__item-icon"
+                  style="background-image: url('./resources/images/icons/percent.svg')"
+                ></div>
+              </div>
+              <p class="steps__item-text typo-caption-3 text-white">Сonsecteturadipiscing elit</p>
+            </div>
+            <div class="steps__item">
+              <div class="steps__item-image">
+                <div class="steps__item-icon" style="background-image: url('./resources/images/icons/file.svg')"></div>
+              </div>
+              <p class="steps__item-text typo-caption-3 text-white">Sed do eiusmod tempor</p>
+            </div>
+            <div class="steps__item">
+              <div class="steps__item-image">
+                <div
+                  class="steps__item-icon"
+                  style="background-image: url('./resources/images/icons/message.svg')"
+                ></div>
+              </div>
+              <p class="steps__item-text typo-caption-3 text-white">Esse cillum dolore eu fugiat</p>
+            </div>
+            <div class="steps__item">
+              <div class="steps__item-image">
+                <div class="steps__item-icon" style="background-image: url('./resources/images/icons/money.svg')"></div>
+              </div>
+              <p class="steps__item-text typo-caption-3 text-white">Excepteur sint occaecat cupidatat non proident</p>
+            </div>
+          </div>
+          <div class="order__form">
+            <form action="" class="form form_error" novalidate>
+              <div class="form__row">
+                <div class="form__field form__field_select">
+                  <div class="select">
+                    <div class="select__field">
+                      <input
+                        type="text"
+                        name="system_type"
+                        class="select__input"
+                        readonly
+                        value=""
+                        placeholder="Выберите тип системы"
+                        required
+                      />
+                      <div class="select__arrow"></div>
+                    </div>
+                    <div class="select__dropdown">
+                      <ul class="select__options">
+                        <li class="select__option" data-index="0" data-value="Sed ut perspiciatis">
+                          Sed ut perspiciatis
+                        </li>
+                        <li class="select__option" data-index="1" data-value="Nemo enim ipsam">Nemo enim ipsam</li>
+                        <li class="select__option" data-index="2" data-value="Et harum quidem">Et harum quidem</li>
+                        <li class="select__option" data-index="3" data-value="Temporibus autem">Temporibus autem</li>
+                        <li class="select__option" data-index="4" data-value="Itaque earum rerum">
+                          Itaque earum rerum
+                        </li>
+                        <li class="select__option" data-index="5" data-value="Sed ut perspiciatis">
+                          Sed ut perspiciatis
+                        </li>
+                        <li class="select__option" data-index="6" data-value="Nemo enim ipsam">Nemo enim ipsam</li>
+                        <li class="select__option" data-index="7" data-value="Et harum quidem">Et harum quidem</li>
+                        <li class="select__option" data-index="8" data-value="Temporibus autem">Temporibus autem</li>
+                        <li class="select__option" data-index="9" data-value="Itaque earum rerum">
+                          Itaque earum rerum
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="form__field form__field_input">
+                  <input
+                    type="email"
+                    name="email"
+                    class="input input_text"
+                    placeholder="Ваш e-mail"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="form__field form__field_input form__field_error">
+                  <input type="text" name="name" class="input input_text" placeholder="Ваше имя" autocomplete="off" />
+                  <span class="form__error-message" data-text="">No valid</span>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__field form__field_range">
+                  <div class="input-range">
+                    <div class="input-range__top">
+                      <span class="input-range__title typo-body-2 text-white">
+                        Sed ut perspiciatis, unde omnis iste natus
+                      </span>
+                      <span class="input-range__value typo-body-2-semibold text-white">75%</span>
+                    </div>
+                    <input
+                      class="input-range__input"
+                      type="range"
+                      name="amount"
+                      min="0"
+                      max="100"
+                      step="1"
+                      value="75"
+                    />
+                  </div>
+                </div>
+                <div class="form__field form__field_input-file">
+                  <label class="input-file">
+                    <input type="file" name="file" />
+                    <div class="input-file__icon"></div>
+                    <span class="input-file__text typo-caption-1">Прикрепить файл</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form__row">
+                <div class="form__field form__field_submit">
+                  <button type="submit" class="btn btn_primary btn_full-width btn_uppercase-text">Отправить</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container footer__container">

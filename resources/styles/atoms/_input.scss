@@ -1,0 +1,31 @@
+input {
+  width: 100%;
+  border: unset;
+  background-color: transparent;
+  color: $black-27;
+  @include typo-body-2;
+  outline: none;
+
+  &::placeholder {
+    @include typo-body-2;
+    color: $black-27;
+  }
+
+  &.input {
+    &_text {
+      padding: 12px 8px;
+      border: 1px solid $white;
+      border-radius: 3px;
+      background-color: rgba($white, 0.85);
+      transition: border-color $delaySm ease;
+
+      @include hover {
+        border-color: $skyblue;
+      }
+
+      &:focus {
+        border-color: $skyblue;
+      }
+    }
+  }
+}

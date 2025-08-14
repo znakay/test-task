@@ -1,0 +1,155 @@
+.select {
+  $self: &;
+
+  position: relative;
+
+  &__field {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    padding: 12px 8px;
+    background-color: rgba($white, 0.85);
+    border: 1px solid $white;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: color $delaySm ease, background-color $delaySm ease, border-radius $delaySm ease,
+      border-color $delaySm ease;
+
+    @include hover {
+      border-color: $skyblue;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+    }
+  }
+
+  &__input {
+    width: 100%;
+    color: $black-27;
+    @include typo-body-2;
+    @include text-wrap(1);
+    background-color: transparent;
+    transition: color $delaySm ease;
+
+    &::placeholder {
+      color: $black-27;
+      @include typo-body-2;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    color: $black;
+    transition: rotate $delaySm ease;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      mask-image: url($icons + "/arrow-down.svg");
+      mask-position: center;
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      background-color: currentColor;
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    translate: 0 48px;
+    display: grid;
+    grid-template-rows: 0fr;
+    padding: 0 5px 0 0;
+    width: 100%;
+    max-height: 180px;
+    border-radius: 0 0 3px 3px;
+    border: 1px solid rgba($gray-3d, 0.85);
+    border-top: unset;
+    background-color: $black-27;
+    transition: grid-template-rows $delaySm ease, padding $delaySm ease;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 7px;
+      background-color: $gray-3d;
+      border-radius: 3px;
+      padding-right: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $skyblue;
+      border-radius: 3px;
+    }
+  }
+
+  &__option {
+    padding: 0 10px;
+    text-align: start;
+    width: 100%;
+    @include typo-body-2;
+    line-height: 34px;
+    color: $white;
+    transition: color $delaySm ease, background-color $delaySm ease;
+    cursor: pointer;
+
+    @include hover {
+      color: $blue;
+    }
+
+    &_selected {
+      color: $skyblue;
+      pointer-events: none;
+    }
+  }
+
+  &_active {
+    #{$self}__field {
+      border-color: rgba($gray-3d, 0.85);
+      background-color: rgba($gray-3d, 0.85);
+      border-radius: 3px 3px 0 0;
+    }
+
+    #{$self}__input {
+      color: $white;
+
+      &::placeholder {
+        color: $white;
+      }
+    }
+
+    #{$self}__arrow {
+      rotate: 180deg;
+      color: $white;
+    }
+
+    #{$self}__dropdown {
+      grid-template-rows: 1fr;
+      padding: 8px 5px 8px 0;
+      border-width: 1px;
+    }
+  }
+}
