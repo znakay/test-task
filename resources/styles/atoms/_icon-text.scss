@@ -1,0 +1,54 @@
+.icon-text {
+  $self: &;
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  color: $light-gray-c3;
+  @include typo-caption-2;
+
+  &::before {
+    content: "";
+    flex-shrink: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &_link {
+    color: $white;
+
+    @include hover {
+      text-decoration: underline;
+    }
+  }
+
+  &_type-qiwi::before {
+    background-image: url($icons + "/qiwi.svg");
+  }
+
+  &_type-yandex::before {
+    background-image: url($icons + "/walet.svg");
+  }
+
+  &_type-web-money::before {
+    background-image: url($icons + "/webmoney.svg");
+  }
+
+  &_type-mail::before {
+    background-image: url($icons + "/envelope.svg");
+  }
+  &_type-vk::before {
+    background-image: url($icons + "/vk.svg");
+  }
+
+  &_type-mail::before {
+    background-image: url($icons + "/envelope.svg");
+  }
+
+  &_type-vk::before {
+    background-image: url($icons + "/vk.svg");
+  }
+}
