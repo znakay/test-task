@@ -1,7 +1,8 @@
 .steps {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 30px;
 
   @include media-breakpoint-down(lg) {
     flex-direction: column;
@@ -28,36 +29,6 @@
       max-width: unset;
     }
 
-    &-image {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100px;
-      height: 100px;
-      border: 5px solid $blue;
-      border-radius: 50%;
-      background-color: $skyblue;
-
-      @include media-breakpoint-down(xl) {
-        width: 80px;
-        height: 80px;
-      }
-    }
-
-    &-icon {
-      flex-shrink: 0;
-      width: 55px;
-      height: 55px;
-      background-position: center;
-      background-size: contain;
-      background-repeat: no-repeat;
-
-      @include media-breakpoint-down(xl) {
-        width: 40px;
-        height: 40px;
-      }
-    }
-
     &:not(:first-child) {
       position: relative;
 
@@ -81,7 +52,7 @@
 
         @include media-breakpoint-down(xl) {
           translate: -76% 39px;
-          width: 70px;
+          width: 58px;
           height: 6px;
         }
 
@@ -92,6 +63,34 @@
           translate: -50% -28px;
           rotate: 90deg;
         }
+      }
+    }
+  }
+
+  &__circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 5px solid $blue;
+    border-radius: 50%;
+    background-color: $skyblue;
+
+    @include media-breakpoint-down(xl) {
+      width: 80px;
+      height: 80px;
+    }
+
+    &-icon {
+      flex-shrink: 0;
+      width: 55px;
+      height: 55px;
+      object-fit: cover;
+
+      @include media-breakpoint-down(xl) {
+        width: 40px;
+        height: 40px;
       }
     }
   }
