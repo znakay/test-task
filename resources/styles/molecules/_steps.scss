@@ -2,6 +2,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 
   @include media-breakpoint-down(lg) {
@@ -12,6 +13,7 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,8 +22,12 @@
     max-width: 189px;
     width: 100%;
 
-    @include media-breakpoint-down(xl) {
+    @include media-breakpoint-down(xxl) {
       margin: unset;
+      max-width: 179px;
+    }
+
+    @include media-breakpoint-down(xl) {
       max-width: 150px;
     }
 
@@ -29,39 +35,50 @@
       max-width: unset;
     }
 
-    &:not(:first-child) {
-      position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      translate: -74% 47px;
+      width: 110px;
+      height: 6px;
+      background-image: url($images + "/ellipse-line.svg");
+      background-position: left;
+      background-size: cover;
+      background-repeat: no-repeat;
 
-      &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        translate: -74% 47px;
-        width: 110px;
+      @include media-breakpoint-down(xxl) {
+        translate: -60% 47px;
+        width: 95px;
+      }
+
+      @include media-breakpoint-down(xl) {
+        translate: -76% 39px;
+        width: 58px;
         height: 6px;
-        background-image: url($images + "/ellipse-line.svg");
-        background-position: left;
-        background-size: cover;
-        background-repeat: no-repeat;
+      }
 
-        @include media-breakpoint-down(xxl) {
-          translate: -70% 47px;
-          width: 95px;
-        }
+      @include media-breakpoint-down(lg) {
+        top: 0;
+        left: 50%;
+        width: 50px;
+        translate: -50% -28px;
+        rotate: 90deg;
+      }
+    }
 
-        @include media-breakpoint-down(xl) {
-          translate: -76% 39px;
-          width: 58px;
-          height: 6px;
-        }
+    &:first-child,
+    &:nth-child(5n + 6) {
+      &::before {
+        content: none;
+      }
+    }
 
-        @include media-breakpoint-down(lg) {
-          top: 0;
-          left: 50%;
-          width: 50px;
-          translate: -50% -28px;
-          rotate: 90deg;
+    &:nth-child(5n + 6) {
+      @include media-breakpoint-down(lg) {
+        &::before {
+          content: "";
         }
       }
     }
