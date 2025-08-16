@@ -2,23 +2,35 @@
   "name": "test-task",
   "version": "1.0.0",
   "description": "[Figma](https://www.figma.com/file/F2qhd2q7PcL9zfIA7y500A/Testing? type=design&node-id=0-1&mode=design&t=ouEUZU3qDLkkc1Ya-0)",
+  "homepage": "https://znakay.github.io/test-task",
   "main": "index.js",
   "scripts": {
-    "styles": "sass --no-source-map --watch resources/styles/index.scss index.css",
-    "build:styles": "sass --no-source-map resources/styles/index.scss temp.css && npx postcss temp.css --use autoprefixer -o index.css && rm temp.css",
-    "watch:styles": "npm run styles & npx postcss index.css --use autoprefixer -o index.css --watch"
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --watch --mode development"
   },
   "browserslist": [
     "last 3 versions"
   ],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "sass": "^1.90.0"
-  },
   "devDependencies": {
+    "@babel/core": "^7.28.3",
+    "@babel/preset-env": "^7.28.3",
     "autoprefixer": "^10.4.21",
+    "babel-loader": "^10.0.0",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^13.0.1",
+    "css-loader": "^7.1.2",
+    "html-webpack-plugin": "^5.6.4",
+    "mini-css-extract-plugin": "^2.9.4",
     "postcss": "^8.5.6",
-    "postcss-cli": "^11.0.1"
+    "postcss-cli": "^11.0.1",
+    "postcss-loader": "^8.1.1",
+    "sass": "^1.90.0",
+    "sass-loader": "^16.0.5",
+    "webpack": "^5.101.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
   }
 }

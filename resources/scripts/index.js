@@ -1,5 +1,7 @@
 "use strict";
 
+import '@styles/index.scss';
+
 import { initForm } from "./components/form/index.js";
 import { initHeader } from "./components/header/index.js";
 
