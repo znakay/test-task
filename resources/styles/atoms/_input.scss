@@ -1,30 +1,35 @@
+@use '../global/colors' as c;
+@use '../global/mixin/hover' as *;
+@use '../global/mixin/typography' as *;
+@use '../config/variables' as v;
+
 input {
   width: 100%;
   border: unset;
   background-color: transparent;
-  color: $black-27;
+  color: c.$black-27;
   @include typo-body-2;
   outline: none;
 
   &::placeholder {
     @include typo-body-2;
-    color: $black-27;
+    color: c.$black-27;
   }
 
   &.input {
     &_text {
       padding: 12px 8px;
-      border: 1px solid $white;
+      border: 1px solid c.$white;
       border-radius: 3px;
-      background-color: rgba($white, 0.85);
-      transition: border-color $delaySm ease;
+      background-color: rgba(c.$white, 0.85);
+      transition: border-color v.$delaySm ease;
 
       @include hover {
-        border-color: $skyblue;
+        border-color: c.$skyblue;
       }
 
       &:focus {
-        border-color: $skyblue;
+        border-color: c.$skyblue;
       }
     }
   }

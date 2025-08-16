@@ -1,4 +1,7 @@
 @use "sass:map";
+@use '../global/mixin/breakpoint' as *;
+@use '../config/variables' as v;
+@use '../global/colors' as c;
 
 .hero {
   position: relative;
@@ -14,7 +17,7 @@
 
   &__container {
     position: relative;
-    z-index: map.get($zIndex, 1);
+    z-index: map.get(v.$zIndex, 1);
     display: flex;
     flex-direction: column;
     row-gap: 80px;
@@ -26,7 +29,7 @@
 
   &__bg {
     position: absolute;
-    z-index: map.get($zIndex, "-1");
+    z-index: map.get(v.$zIndex, "-1");
     top: 0;
     left: 0;
     width: 100%;
@@ -62,7 +65,7 @@
       left: 10px;
       width: 5px;
       height: 1.5px;
-      background-color: $black;
+      background-color: c.$black;
     }
   }
 

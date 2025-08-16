@@ -1,3 +1,8 @@
+@use "../global/mixin/typography" as *;
+@use "../global/mixin/button" as *;
+@use "../global/mixin/hover" as *;
+@use "../global/colors" as c;
+
 button {
   border: unset;
   border-radius: unset;
@@ -14,18 +19,18 @@ button {
   }
 
   &_primary {
-    @include btn-color($white, $white, $skyblue);
+    @include btn-color(c.$white, c.$white, c.$skyblue);
 
     @include hover {
-      @include btn-color($white, $white, $blue);
+      @include btn-color(c.$white, c.$white, c.$blue);
     }
   }
 
   &_secondary {
-    @include btn-color($black-2a, $gray-6f, $white);
+    @include btn-color(c.$black-2a, c.$gray-6f, c.$white);
 
     @include hover {
-      @include btn-color($white, $black-27, $black-27);
+      @include btn-color(c.$white, c.$black-27, c.$black-27);
     }
   }
 

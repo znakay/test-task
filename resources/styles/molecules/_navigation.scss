@@ -1,3 +1,9 @@
+@use '../global/mixin/breakpoint' as *;
+@use '../global/colors' as c;
+@use '../config/variables' as v;
+@use '../global/mixin/typography' as *;
+@use '../global/mixin/hover' as *;
+
 .navigation {
   $self: &;
   display: flex;
@@ -12,7 +18,7 @@
   &__item {
     &_active {
       #{$self}__link {
-        color: $skyblue;
+        color: c.$skyblue;
         pointer-events: none;
       }
     }
@@ -20,11 +26,11 @@
 
   &__link {
     @include typo-caption-1;
-    color: $white;
-    transition: color $delaySm ease;
+    color: c.$white;
+    transition: color v.$delaySm ease;
 
     @include hover {
-      color: $skyblue;
+      color: c.$skyblue;
     }
   }
 }

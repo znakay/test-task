@@ -1,4 +1,9 @@
 @use "sass:map";
+@use '../config/variables' as v;
+@use '../config/path' as *;
+@use '../global/colors' as c;
+@use '../global/mixin/text-wrap' as *;
+@use '../global/mixin/hover' as *;
 
 .input-file {
   position: relative;
@@ -8,16 +13,16 @@
   gap: 10px;
   padding: 10px 16px;
   width: 100%;
-  border: 2px solid $skyblue;
+  border: 2px solid c.$skyblue;
   border-radius: 3px;
-  color: $black-27;
-  background-color: $white;
+  color: c.$black-27;
+  background-color: c.$white;
   cursor: pointer;
-  transition: color $delaySm ease, background-color $delaySm ease;
+  transition: color v.$delaySm ease, background-color v.$delaySm ease;
 
   input[type="file"] {
     position: absolute;
-    z-index: map.get($zIndex, "-1");
+    z-index: map.get(v.$zIndex, "-1");
     display: block;
     opacity: 0;
     width: 0;
@@ -48,7 +53,7 @@
   }
 
   @include hover {
-    color: $white;
-    background-color: $skyblue;
+    color: c.$white;
+    background-color: c.$skyblue;
   }
 }

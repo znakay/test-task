@@ -1,5 +1,7 @@
+@use '../global/colors' as c;
+
 a {
   text-decoration: unset;
   cursor: pointer;
-  color: $white;
+  color: c.$white;
 }

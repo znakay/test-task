@@ -1,3 +1,6 @@
+@use '../mixin/breakpoint' as *;
+@use '../fonts' as *;
+
 @mixin font {
   font-family: $font;
   line-height: 100%;

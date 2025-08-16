@@ -1,9 +1,14 @@
+@use '../global/colors' as c;
+@use '../global/mixin/typography' as *;
+@use '../global/mixin/hover' as *;
+@use '../config/path' as *;
+
 .icon-text {
   $self: &;
   display: flex;
   align-items: center;
   column-gap: 10px;
-  color: $light-gray-c3;
+  color: c.$light-gray-c3;
   @include typo-caption-2;
 
   &::before {
@@ -18,7 +23,7 @@
   }
 
   &_link {
-    color: $white;
+    color: c.$white;
 
     @include hover {
       text-decoration: underline;
