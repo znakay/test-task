@@ -108,7 +108,7 @@
             </div>
           </div>
           <div class="order__form">
-            <form action="" class="form form_error" novalidate>
+            <form action="" class="form" novalidate>
               <div class="form__row">
                 <div class="form__field form__field_select">
                   <div class="select">
@@ -118,7 +118,6 @@
                         name="system_type"
                         class="select__input"
                         readonly
-                        value=""
                         placeholder="Выберите тип системы"
                         required
                       />
@@ -157,9 +156,8 @@
                     autocomplete="off"
                   />
                 </div>
-                <div class="form__field form__field_input form__field_error">
+                <div class="form__field form__field_input">
                   <input type="text" name="name" class="input input_text" placeholder="Ваше имя" autocomplete="off" />
-                  <span class="form__error-message" data-text="">No valid</span>
                 </div>
               </div>
               <div class="form__row">
