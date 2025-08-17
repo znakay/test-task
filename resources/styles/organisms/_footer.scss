@@ -83,5 +83,13 @@
     display: flex;
     align-items: center;
     column-gap: 38px;
+
+    @include media-breakpoint-down(md) {
+      column-gap: 28px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      column-gap: 20px;
+    }
   }
 }
