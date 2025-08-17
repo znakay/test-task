@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loremipsum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   </head>
   <body>
     <header class="header">
@@ -25,7 +26,7 @@
                 <a href="#" class="navigation__link">Цены</a>
               </li>
               <li class="navigation__item">
-                <a href="#order" class="navigation__link">Оформить заказ</a>
+                <a href="#" class="navigation__link">Оформить заказ</a>
               </li>
             </ul>
           </div>
@@ -40,41 +41,44 @@
     <main>
       <section class="hero">
         <div class="container hero__container">
-          <h2 class="hero__title typo-headline-1">
+          <h2 class="hero__title typo-headline-1 animate" data-direction="Up">
             <span>Lorem ipsum</span>
             dolor sit amet consectetur
             <span>adipiscing</span>
           </h2>
           <div class="hero__text-content">
-            <p class="hero__text typo-body-1-bold">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+            <p class="hero__text typo-body-1-bold animate" data-direction="Up">
+              At vero eos et accusamus et iusto odio dignissimos ducimus!
+            </p>
             <ul class="hero__bullet-text">
-              <li class="hero__bullet-item">
+              <li class="hero__bullet-item animate" data-direction="Up">
                 <span class="typo-body-1">Totam rem aperiam eaque ipsa</span>
               </li>
-              <li class="hero__bullet-item">
+              <li class="hero__bullet-item animate" data-direction="Up">
                 <span class="typo-body-1">Sit voluptatem accusantium doloremque laudantium</span>
               </li>
-              <li class="hero__bullet-item">
+              <li class="hero__bullet-item animate" data-direction="Up">
                 <span class="typo-body-1">Sed ut perspiciatis, unde omnis iste natus error</span>
               </li>
             </ul>
           </div>
-          <div class="hero__buttons">
+          <div class="hero__buttons animate" data-direction="Up">
             <a href="#" class="hero__button btn btn_primary">Заказать</a>
             <a href="#" class="hero__button btn btn_secondary">Подробнее</a>
           </div>
         </div>
+        <img src="./resources/images/hero_image.webp" alt="" class="hero__bg" />
       </section>
       <section id="order" class="order">
         <div class="container order__container">
-          <h2 class="order__title typo-headline-2 text-white">
+          <h2 class="order__title typo-headline-2 text-white animate" data-direction="Up">
             Оформление
             <span>заказа</span>
           </h2>
-          <p class="order__text typo-body-2 text-gray-bb">
+          <p class="order__text typo-body-2 text-gray-bb animate" data-direction="Up">
             Перед заполнением формы ознакомьтесь с нашей схемой работы!
           </p>
-          <div class="order__steps steps">
+          <div class="order__steps steps animate" data-direction="Left">
             <div class="steps__item">
               <div class="steps__circle">
                 <img src="./images/icons/search.svg" alt="search" class="steps__circle-icon" />
@@ -106,7 +110,7 @@
               <p class="steps__item-text typo-caption-3 text-white">Excepteur sint occaecat cupidatat non proident</p>
             </div>
           </div>
-          <div class="order__form">
+          <div class="order__form animate" data-direction="Right">
             <form action="" class="form" novalidate>
               <div class="form__row">
                 <div class="form__field form__field_select">

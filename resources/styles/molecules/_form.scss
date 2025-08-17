@@ -1,3 +1,5 @@
+@use '../global/mixin/breakpoint' as *;
+
 .form {
   display: flex;
   flex-direction: column;

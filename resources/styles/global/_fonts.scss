@@ -1,3 +1,5 @@
+@use '../config/path' as *;
+
 @mixin font-face($font-family, $url, $weight) {
   @font-face {
     font-family: '#{$font-family}';

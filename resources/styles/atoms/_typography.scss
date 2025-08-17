@@ -1,3 +1,6 @@
+@use '../global/mixin/typography' as *;
+@use '../global/colors' as *;
+
 h1,
 .typo-headline-1 {
   @include typo-headline-1;

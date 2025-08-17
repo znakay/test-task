@@ -1,3 +1,10 @@
+@use '../config/path' as *;
+@use '../global/colors' as c;
+@use '../global/mixin/text-wrap' as *;
+@use '../global/mixin/typography' as *;
+@use '../global/mixin/hover' as *;
+@use '../config/variables' as v;
+
 .select {
   $self: &;
 
@@ -10,15 +17,15 @@
     align-items: center;
     column-gap: 8px;
     padding: 12px 8px;
-    background-color: rgba($white, 0.85);
-    border: 1px solid $white;
+    background-color: rgba(c.$white, 0.85);
+    border: 1px solid c.$white;
     border-radius: 3px;
     cursor: pointer;
-    transition: color $delaySm ease, background-color $delaySm ease, border-radius $delaySm ease,
-      border-color $delaySm ease;
+    transition: color v.$delaySm ease, background-color v.$delaySm ease, border-radius v.$delaySm ease,
+      border-color v.$delaySm ease;
 
     @include hover {
-      border-color: $skyblue;
+      border-color: c.$skyblue;
     }
 
     &::before {
@@ -35,14 +42,14 @@
 
   &__input {
     width: 100%;
-    color: $black-27;
+    color: c.$black-27;
     @include typo-body-2;
     @include text-wrap(1);
     background-color: transparent;
-    transition: color $delaySm ease;
+    transition: color v.$delaySm ease;
 
     &::placeholder {
-      color: $black-27;
+      color: c.$black-27;
       @include typo-body-2;
     }
   }
@@ -53,8 +60,8 @@
     align-items: center;
     width: 20px;
     height: 20px;
-    color: $black;
-    transition: rotate $delaySm ease;
+    color: c.$black;
+    transition: rotate v.$delaySm ease;
 
     &::after {
       content: "";
@@ -81,10 +88,10 @@
     width: 100%;
     max-height: 180px;
     border-radius: 0 0 3px 3px;
-    border: 1px solid rgba($gray-3d, 0.85);
+    border: 1px solid rgba(c.$gray-3d, 0.85);
     border-top: unset;
-    background-color: $black-27;
-    transition: grid-template-rows $delaySm ease, padding $delaySm ease;
+    background-color: c.$black-27;
+    transition: grid-template-rows v.$delaySm ease, padding v.$delaySm ease;
   }
 
   &__options {
@@ -95,13 +102,13 @@
 
     &::-webkit-scrollbar {
       width: 7px;
-      background-color: $gray-3d;
+      background-color: c.$gray-3d;
       border-radius: 3px;
       padding-right: 5px;
     }
 
     &::-webkit-scrollbar-thumb {
-      background-color: $skyblue;
+      background-color: c.$skyblue;
       border-radius: 3px;
     }
   }
@@ -112,38 +119,38 @@
     width: 100%;
     @include typo-body-2;
     line-height: 34px;
-    color: $white;
-    transition: color $delaySm ease, background-color $delaySm ease;
+    color: c.$white;
+    transition: color v.$delaySm ease, background-color v.$delaySm ease;
     cursor: pointer;
 
     @include hover {
-      color: $blue;
+      color: c.$blue;
     }
 
     &_selected {
-      color: $skyblue;
+      color: c.$skyblue;
       pointer-events: none;
     }
   }
 
   &_active {
     #{$self}__field {
-      border-color: rgba($gray-3d, 0.85);
-      background-color: rgba($gray-3d, 0.85);
+      border-color: rgba(c.$gray-3d, 0.85);
+      background-color: rgba(c.$gray-3d, 0.85);
       border-radius: 3px 3px 0 0;
     }
 
     #{$self}__input {
-      color: $white;
+      color: c.$white;
 
       &::placeholder {
-        color: $white;
+        color: c.$white;
       }
     }
 
     #{$self}__arrow {
       rotate: 180deg;
-      color: $white;
+      color: c.$white;
     }
 
     #{$self}__dropdown {

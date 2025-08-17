@@ -1,3 +1,5 @@
+@use '../global/mixin/breakpoint' as *;
+
 .container {
   margin-inline: auto;
   padding: 0 16px;

@@ -1,3 +1,5 @@
+@use '../global/colors' as c;
+
 .colored-text {
-  color: $skyblue;
+  color: c.$skyblue;
 }

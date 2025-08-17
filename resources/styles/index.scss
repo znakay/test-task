@@ -1,24 +1,25 @@
-@import "./config/path";
-@import "./config/variables";
-@import "./config/general";
+@use "./config/general";
 
-@import "./global";
+@use './global/container';
+@use './global/list';
+@use './global/link';
 
-@import "./atoms/typography";
-@import "./atoms/button";
-@import "./atoms/colored-text";
-@import "./atoms/burger";
-@import "./atoms/icon-text";
-@import './atoms/input';
-@import './atoms/select';
-@import './atoms/input-file';
-@import './atoms/input-range';
+@use "./atoms/typography";
+@use "./atoms/button";
+@use "./atoms/colored-text";
+@use "./atoms/burger";
+@use "./atoms/icon-text";
+@use './atoms/input';
+@use './atoms/select';
+@use './atoms/input-file';
+@use './atoms/input-range';
+@use './atoms/animate';
 
-@import "./molecules/navigation";
-@import "./molecules/steps";
-@import "./molecules/form";
+@use "./molecules/navigation";
+@use "./molecules/steps";
+@use "./molecules/form";
 
-@import "./organisms/header";
-@import "./organisms/hero";
-@import "./organisms/order";
-@import "./organisms/footer";
+@use "./organisms/header";
+@use "./organisms/hero";
+@use "./organisms/order";
+@use "./organisms/footer";

@@ -1,6 +1,10 @@
+@use '../global/mixin/breakpoint' as *;
+@use '../config/path' as *;
+@use '../global/colors' as c;
+
 .order {
   padding: 120px 0 150px;
-  background-color: $black-27;
+  background-color: c.$black-27;
   background-image: url($images + "/pattern-map.svg");
 
   &__container {

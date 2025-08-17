@@ -7,7 +7,10 @@
   "scripts": {
     "start": "webpack serve --mode development",
     "build": "webpack --mode production",
-    "watch": "webpack --watch --mode development"
+    "watch": "webpack --watch --mode development",
+    "styles": "rm -f ./index.css && sass --no-source-map --watch resources/styles/index.scss index.css",
+    "build:styles": "sass resources/styles/index.scss temp.css && npx postcss temp.css --use autoprefixer cssnano --no-map -o index.css && rm -f temp.css.map && rm -f temp.css",
+    "watch:styles": "npm run styles && npx postcss index.css --use autoprefixer -o index.css --watch"
   },
   "browserslist": [
     "last 3 versions"
@@ -24,6 +27,7 @@
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.4",
     "mini-css-extract-plugin": "^2.9.4",
+    "cssnano": "^7.1.0",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "postcss-loader": "^8.1.1",
