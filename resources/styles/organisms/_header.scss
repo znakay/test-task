@@ -12,6 +12,10 @@
   padding: 33px 0 32px;
   background-color: rgba(c.$black-10, 0.9);
 
+  @include media-breakpoint-down(lg) {
+    padding: 20px 0;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;

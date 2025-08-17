@@ -1,7 +1,7 @@
-@use '../global/colors' as c;
-@use '../global/mixin/text-wrap' as *;
-@use '../config/variables' as v;
-@use '../global/mixin/hover' as *;
+@use "../global/colors" as c;
+@use "../global/mixin/text-wrap" as *;
+@use "../config/variables" as v;
+@use "../global/mixin/hover" as *;
 
 .input-range {
   &__top {
@@ -30,9 +30,9 @@
     outline: none;
     cursor: pointer;
 
-    &::-webkit-slider-thumb,
-    &::-moz-range-thumb {
+    &::-webkit-slider-thumb {
       appearance: none;
+      margin-top: -8px;
       width: 24px;
       height: 24px;
       border-radius: 50%;
@@ -45,6 +45,30 @@
         scale: 1.1;
         box-shadow: 0 3px 8px rgba(79, 195, 247, 0.5);
       }
+    }
+
+    &::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: c.$skyblue;
+      border: 3px solid c.$blue;
+      cursor: pointer;
+      transition: scale v.$delaySm ease, box-shadow v.$delaySm ease;
+
+      @include hover {
+        scale: 1.1;
+        box-shadow: 0 3px 8px rgba(79, 195, 247, 0.5);
+      }
+    }
+
+    &::-moz-range-track {
+      width: 100%;
+      height: 7px;
+      border-radius: 3px;
+      background-color: rgba(c.$white, 0.7);
+      border: 1px solid c.$white;
+      cursor: pointer;
     }
   }
 }

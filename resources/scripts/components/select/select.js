@@ -1,20 +1,12 @@
-export default class Form {
-  constructor(form) {
-    this.form = form;
+export default class Select {
+  constructor(select) {
+    this.select = select;
 
-    this.select = this.form.querySelector(".select");
-    this.selectInput = this.select?.querySelector(".select__input");
-    this.selectDropDown = this.select?.querySelector(".select__dropdown");
+    this.selectInput = this.select.querySelector(".select__input");
+    this.selectDropDown = this.select.querySelector(".select__dropdown");
     this.selectActiveClass = "select_active";
     this.selectOptionActiveClass = "select__option_selected";
     this.currentSelectOptionIndex = null;
-
-    this.inputFile = this.form.querySelector(".input-file");
-    this.inputFileText = this.inputFile.querySelector(".input-file__text");
-
-    this.range = this.form.querySelector(".input-range");
-    this.rangeValue = this.range.querySelector(".input-range__value");
-    this.rangeInput = this.range.querySelector(".input-range__input");
 
     this.init();
   }
@@ -41,10 +33,10 @@ export default class Form {
 
     this.currentSelectOptionIndex = e.target.dataset.index;
 
-    this.setupSelectOption(value);
+    this.setupSelectValue(value);
   }
 
-  setupSelectOption(value) {
+  setupSelectValue(value) {
     this.selectInput.value = value;
   }
 
@@ -70,33 +62,7 @@ export default class Form {
     window.addEventListener("click", this.handleOutSelect.bind(this));
   }
 
-  handleInputFile(e) {
-    const file = e.target.files[0];
-    this.inputFileText.textContent = file.name;
-  }
-
-  bindActionsOnInputFile() {
-    this.inputFile.addEventListener("change", this.handleInputFile.bind(this));
-  }
-
-  updateRangeInputValue() {
-    this.rangeValue.textContent = `${this.rangeInput.value}%`;
-  }
-
-  bindActionsOnRange() {
-    this.updateRangeInputValue();
-    this.rangeInput.addEventListener("input", this.updateRangeInputValue.bind(this));
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-  }
-
   init() {
     this.bindActionsOnSelect();
-    this.bindActionsOnInputFile();
-    this.bindActionsOnRange();
-
-    this.form.addEventListener('submit', this.handleSubmit.bind(this));
   }
 }
