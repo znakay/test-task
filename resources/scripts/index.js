@@ -3,6 +3,9 @@
 import Animation from "./animations/index.js";
 import { initForm } from "./components/form/index.js";
 import { initHeader } from "./components/header/index.js";
+import { initInputFile } from "./components/inputFile/index.js";
+import { initInputRange } from "./components/inputRange/index.js";
+import { initSelect } from "./components/select/index.js";
 
 window.addEventListener("DOMContentLoaded", () => {
   window.refs = {
@@ -17,6 +20,24 @@ window.addEventListener("DOMContentLoaded", () => {
       init: function () {
         initForm(this.selectors);
       },
+    },
+    select: {
+      selectors: [".select"],
+      init: function () {
+        initSelect(this.selectors);
+      },
+    },
+    inputFile: {
+      selectors: [".input-file"],
+      init: function () {
+        initInputFile(this.selectors);
+      },
+    },
+    inputRange: {
+      selectors: ['.input-range'],
+      init: function() {
+        initInputRange(this.selectors);
+      }
     },
     animation: {
       selectors: [".animate"],
