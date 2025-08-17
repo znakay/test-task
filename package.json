@@ -5,12 +5,16 @@
   "homepage": "https://znakay.github.io/test-task",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --mode development",
-    "build": "webpack --mode production",
-    "watch": "webpack --watch --mode development",
-    "styles": "rm -f ./index.css && sass --no-source-map --watch resources/styles/index.scss index.css",
-    "build:styles": "sass resources/styles/index.scss temp.css && npx postcss temp.css --use autoprefixer cssnano --no-map -o index.css && rm -f temp.css.map && rm -f temp.css",
-    "watch:styles": "npm run styles && npx postcss index.css --use autoprefixer -o index.css --watch"
+    "dev": "cross-env NODE_ENV=development webpack serve --config webpack.config.js --open",
+    "start": "npm run dev",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.config.js --mode=production",
+    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.js --mode=development",
+    "clean": "rimraf dist",
+    "serve": "serve -s dist -l 3000",
+    "preview": "npm run build && npm run serve",
+    "watch": "cross-env NODE_ENV=development webpack --config webpack.config.js --mode=development --watch",
+    "stats": "cross-env NODE_ENV=production webpack --config webpack.config.js --mode=production --json > webpack-stats.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "browserslist": [
     "last 3 versions"
@@ -22,18 +26,23 @@
     "@babel/preset-env": "^7.28.3",
     "autoprefixer": "^10.4.21",
     "babel-loader": "^10.0.0",
-    "clean-webpack-plugin": "^4.0.0",
     "copy-webpack-plugin": "^13.0.1",
+    "core-js": "^3.45.0",
+    "cross-env": "^10.0.0",
     "css-loader": "^7.1.2",
     "css-minimizer-webpack-plugin": "^7.0.2",
+    "cssnano": "^7.1.0",
     "html-webpack-plugin": "^5.6.4",
+    "imagemin-webpack-plugin": "^2.4.2",
     "mini-css-extract-plugin": "^2.9.4",
     "postcss": "^8.5.6",
     "postcss-cli": "^11.0.1",
     "postcss-loader": "^8.1.1",
     "sass": "^1.90.0",
     "sass-loader": "^16.0.5",
+    "terser-webpack-plugin": "^5.3.14",
     "webpack": "^5.101.2",
+    "webpack-bundle-analyzer": "^4.10.2",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
   }
