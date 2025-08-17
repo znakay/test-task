@@ -1,7 +1,6 @@
 "use strict";
 
 import Animation from "./animations/index.js";
-import { initForm } from "./components/form/index.js";
 import { initHeader } from "./components/header/index.js";
 import { initInputFile } from "./components/inputFile/index.js";
 import { initInputRange } from "./components/inputRange/index.js";
@@ -13,12 +12,6 @@ window.addEventListener("DOMContentLoaded", () => {
       selectors: [".header"],
       init: function () {
         initHeader(this.selectors);
-      },
-    },
-    form: {
-      selectors: [".form"],
-      init: function () {
-        initForm(this.selectors);
       },
     },
     select: {
