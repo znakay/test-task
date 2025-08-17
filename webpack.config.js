@@ -2,7 +2,8 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin'); 
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = {
   entry: './resources/scripts/index.js',
@@ -90,6 +91,28 @@ module.exports = {
     splitChunks: {
       chunks: 'all',
     },
+    minimizer: [
+      new CssMinimizerPlugin({
+        minimizerOptions: {
+          preset: [
+            'default',
+            {
+              discardComments: { removeAll: true },
+              normalizeWhitespace: true,
+              colormin: true,
+              convertValues: true,
+              discardDuplicates: true,
+              discardEmpty: true,
+              mergeRules: true,
+              minifyFontValues: true,
+              minifySelectors: true,
+              reduceIdents: false,
+              svgo: true,
+            },
+          ],
+        },
+      }),
+    ],
   },
   resolve: {
     alias: {
