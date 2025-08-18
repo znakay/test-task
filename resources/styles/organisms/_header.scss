@@ -29,10 +29,10 @@
   &__navigation {
     @include media-breakpoint-down(lg) {
       position: absolute;
-      top: 97px;
+      top: 72px;
       left: 0;
       width: 100%;
-      height: calc(100dvh - 97px);
+      height: calc(100dvh - 72px);
       translate: 100%;
       transition: translate v.$delaySm ease;
     }
